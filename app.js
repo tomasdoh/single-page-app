@@ -5,11 +5,17 @@ function submitNote() {
   .getElementById("note-submit")
   .addEventListener("click", function(clickEvent){
       clickEvent.preventDefault();
-      showNote();
+      addNote();
   })
 };
 
-function showNote() {
+document.body.onload = addElement;
+
+function addNote () {
+  var newDiv = document.createElement("div");
   var note = document.getElementById("note-text").value
-  document.getElementById("note").innerHTML = note
+  var newNote = document.createTextNode(note);
+  newDiv.appendChild(newNote);
+  var currentDiv = document.getElementById("div1");
+  document.body.insertBefore(newDiv, currentDiv);
 };

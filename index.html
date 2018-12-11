@@ -9,23 +9,9 @@
       <input type="text" id="note-text" name="note"/>
       <input type="submit" id="note-submit" value="submit"/>
     </form>
-    <h1 id="note"></h1>
-    <script>
-      submitNote();
-
-      function submitNote() {
-        document
-        .getElementById("note-submit")
-        .addEventListener("click", function(clickEvent){
-            clickEvent.preventDefault();
-            showNote();
-        })
-      };
-
-      function showNote() {
-        var note = document.getElementById("note-text").value
-        document.getElementById("note").innerHTML = note
-      };
-    </script>
+    <div id="div1">
+      <h1 id="note"></h1>
+    </div>
   </body>
+  <script type="text/javascript" src="app.js"></script>
 </html>
