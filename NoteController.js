@@ -7,15 +7,14 @@ function submitNote() {
       clickEvent.preventDefault();
       addNote();
   })
-};
-
-document.body.onload = addElement;
+}
 
 function addNote () {
   var newDiv = document.createElement("div");
-  var note = document.getElementById("note-text").value
+  var note = document.getElementById("note-text").value;
   var newNote = document.createTextNode(note);
+  storeNote(note);
   newDiv.appendChild(newNote);
   var currentDiv = document.getElementById("div1");
   document.body.insertBefore(newDiv, currentDiv);
-};
+}
